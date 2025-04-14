@@ -44,3 +44,33 @@ function checkAccess(hasID, isAbove18) {
 }
 
 console.log(checkAccess(true, true)); // Access granted
+
+// 5. A for loop that go through an array of student score and check the grade if pass or fail
+for (let i = 0; i < score.length; i++) {
+  if (score[i] > 50) {
+    console.log("Pass");
+  } else {
+    console.log("Fail");
+  }
+}
+
+//  6. An arrow function that cehck if student pass both English and Math
+const checkPass = (English, Math) => {
+  if (English >= 50 && Math >= 50) {
+    return "Yes";
+  } else {
+    return "No";
+  }
+};
+
+// 7. A function that check if user have either an Email or phone number
+const UserSignUp = (email, phone) => {
+  if (email || phoneNumber) {
+    return "Allow to sign up";
+  } else {
+    return "denailed to sign up";
+  }
+};
+
+// 8. A function that validate username and password
+
