@@ -49,13 +49,13 @@ console.log(checkAccess(true, true));
 const score = [45, 78, 90, 55, 30]; // I declare this in other not to have error of score not define
 for (let i = 0; i < score.length; i++) {
   if (score[i] > 50) {
-    console.log ("Pass");
+    console.log("Pass");
   } else if (score[i] <= 50) {
-    console.log( "Fail");
+    console.log("Fail");
   }
 }
 
-//  6. An arrow function that cehck if student pass both English and Math
+//  6. An arrow function that check if student pass both English and Math
 const checkPass = (English, Math) => {
   if (English >= 50 && Math >= 50) {
     return "Yes";
