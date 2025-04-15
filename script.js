@@ -12,13 +12,13 @@ checkScore(200);
 
 function checkVotingEligibility(age) {
   if (age >= 18) {
-    console.log("You are eligible to vote");
+    return "You are eligible to vote";
   } else {
-    console.log("Not eligible");
+    return "Not eligible";
   }
 }
 
-checkVotingEligibility(15);
+console.log(checkVotingEligibility(15));
 
 //3.  A function that takes a name and score, then returns the grade based on the score.
 function checkGrade(name, score) {
@@ -43,14 +43,15 @@ function checkAccess(hasID, isAbove18) {
   }
 }
 
-console.log(checkAccess(true, true)); // Access granted
+console.log(checkAccess(true, true));
 
 // 5. A for loop that go through an array of student score and check the grade if pass or fail
+const score = [45, 78, 90, 55, 30]; // I declare this in other not to have error of score not define
 for (let i = 0; i < score.length; i++) {
   if (score[i] > 50) {
-    console.log("Pass");
-  } else {
-    console.log("Fail");
+    console.log ("Pass");
+  } else if (score[i] <= 50) {
+    console.log( "Fail");
   }
 }
 
@@ -64,13 +65,30 @@ const checkPass = (English, Math) => {
 };
 
 // 7. A function that check if user have either an Email or phone number
-const UserSignUp = (email, phone) => {
+const UserSignUp = (email, phoneNumber) => {
   if (email || phoneNumber) {
     return "Allow to sign up";
   } else {
-    return "denailed to sign up";
+    return "Denied to sign up";
   }
 };
 
 // 8. A function that validate username and password
 
+function UserValidate(username, password) {
+  if (username === "" || password === "") {
+    return "Invalid input";
+  }
+}
+
+//  9. A function accepts Hour work and check if it is full time or Part time
+function checkWorkerStatus(hours) {
+  return hours >= 40 ? "Full time" : "Part time";
+}
+
+// 10. An Arrow function that takes two numbers and return the larger one
+const returnBigValue = (a, b) => {
+  return a > b ? a : b;
+};
+
+console.log(returnBigValue(40, 20));
